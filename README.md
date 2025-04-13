@@ -1,1 +1,1 @@
-# meddental-backend
+# MedDental backend
