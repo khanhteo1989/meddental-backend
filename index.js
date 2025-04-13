@@ -59,15 +59,14 @@ Thứ 2 - CN: 8h00 – 17h30 (Không nghỉ trưa)
 
 ❗ Các câu hỏi ngoài lĩnh vực nha khoa (GPT, tài chính, công nghệ, tình cảm...) sẽ bị từ chối lịch sự với hướng dẫn khách hàng liên hệ CSKH.
           `,
-        },
+       },
         { role: 'user', content: message }
       ]
     });
 
     res.json({ reply: completion.choices[0].message.content });
   } catch (error) {
-    console.error('❌ Lỗi:', error);
-    res.status(500).json({ error: error.message || 'Lỗi máy chủ' });
+    res.status(500).json({ error: error.message });
   }
 });
 
